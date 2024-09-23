@@ -59,6 +59,18 @@ notification_config:
 
 Change the values for each key under the `email_config` section.
 
+If you prefer to have multiple email while using the env to set it you can do like this : 
+
+```yaml
+  to_emails:
+    - "{{env_var('MAIL_RECEIVERS')}}"
+```
+
+Your env value :
+```
+MAIL_RECEIVERS="mail-one@test.com,mail-two@test.com"
+```
+
 ## Customize message templates
 
 You can customize message templates in `notification_config`. Here is an example config:
